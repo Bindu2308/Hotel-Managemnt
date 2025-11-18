@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Login.css') }}">
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="left">
+                <div class="login">Login</div>
+                <div class="msg">Welcome back! Please login to access the content.</div>
+            </div>
+
+            <div class="right">
+                <form class="form">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password">
+
+                    <button type="s1" class="btn-submit" id="submit" value="Submit1"
+                        onclick="location.href='{{ url_for('Home')}}';">SUBMIT</button>
+
+                        <!-- <a href="{{ url_for('Signup') }}" class="btn-submit"></a> Farhan -->
+
+                    <!-- <a href="{{ url_for('Signup')}}" ><button type="submit" class="btn-submit" id="submit" value="Submit" >SUBMIT</button></a> -->
+
+                    <!-- <form action="{{ url_for('Login')}}">
+                        <input type="submit" name="" value="Submit" class="btn-login">
+                    </form> -->
+
+                    <a href="{{ url_for('Signup')}}">Don't have an Account?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
